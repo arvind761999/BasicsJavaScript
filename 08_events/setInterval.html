@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h1>leran setInterval  in JavaScript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+
+const sayDate = function(str){
+    console.log("Arvind", str, new Date());
+}    
+
+
+   let intervalId;   
+
+    document.querySelector('#start').addEventListener('click', function(){
+        intervalId = setInterval(sayDate ,1000, "hi");
+    }, false)
+
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId);
+   }, false)
+   
+    
+
+
+
+
+
+</script>
+
+</html>
